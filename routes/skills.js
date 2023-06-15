@@ -6,6 +6,8 @@ var skillsCont = require("../controllers/skills");
 router.get("/", skillsCont.index);
 // GET new post view
 router.get("/new", skillsCont.newSkill);
+//GET /skills/edit
+router.get("/edit/:eid", skillsCont.editSkill);
 // GEt single Skill
 router.get("/:id", skillsCont.showSkill);
 //POST /skills

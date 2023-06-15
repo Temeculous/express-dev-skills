@@ -9,10 +9,15 @@ module.exports = {
   getSkill,
   createSkill,
   deleteSkill,
+  editSkill,
 };
 
 function getSkills() {
   return skills;
+}
+
+function editSkill(skill) {
+  skills.find(skill => skill.id === id);
 }
 
 function getSkill(id) {

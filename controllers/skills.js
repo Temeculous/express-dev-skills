@@ -6,10 +6,21 @@ module.exports = {
   newSkill,
   create,
   destroy,
+  editSkill,
+  edit,
 };
 
 function index(req, res) {
   res.render("skills/index", { skills: skills.getSkills() });
+}
+
+function editSkill(req, res) {
+  res.render("skills/edit", { skill: skills.getSkill(req.params.eid) });
+}
+function edit(req, res) {
+  const id = parseString(req.params.id);
+  skills.editSkill(req.body.skill);
+  res.redirect("/skills/" + id);
 }
 
 function showSkill(req, res) {

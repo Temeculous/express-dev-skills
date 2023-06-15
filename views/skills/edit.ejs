@@ -1,0 +1,7 @@
+<%- include('../partials/header') %>
+<h1>Edit "<%= skill.skill %>" Skill</h1>
+<form action="/skill/<%= skill.id %>/?_method=PUT" method="POST">
+  <input type="text" name="skill" placeholder="<%= skill.skill %>" />
+  <button type="submit">Submit</button>
+</form>
+<%- include('../partials/footer') %>
