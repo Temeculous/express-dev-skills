@@ -2,8 +2,9 @@
 <h1>skills</h1>
 <ul>
   <% skills.forEach((skill) => { %>
-  <li><a href="/skills/<%= skill.id %>"><%= skill.name %></a></li>
+  <li><a href="/skills/<%= skill.id %>"><%= skill.skill %></a></li>
   <% }); %>
 </ul>
+<a href="/skills/new">Add Skill</a>
 <a href="/">Home</a>
 <%- include('../partials/footer') %>
