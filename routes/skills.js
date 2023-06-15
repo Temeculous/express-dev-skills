@@ -9,6 +9,8 @@ router.get("/new", skillsCont.newSkill);
 // GEt single Skill
 router.get("/:id", skillsCont.showSkill);
 //POST /skills
-router.post('/', skillsCont.create);
+router.post("/", skillsCont.create);
+//DELETE /skills/:id
+router.delete("/:bye", skillsCont.destroy);
 
 module.exports = router;
